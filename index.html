@@ -4,7 +4,51 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <title>ID Card Generator</title>
   </head>
-  <body></body>
+  <body>
+    <h1 class="main-heading">ID Card Generator</h1>
+    <div class="container">
+      <div class="left">
+        <h2 class="heading-2">Input Form</h2>
+        <form class="form">
+          <label>Enter Name:</label>
+          <input type="text" id="name" /> <br />
+          <label>Enter College Name:</label>
+          <input type="text" id="college" /><br />
+          <label>Enter City:</label>
+          <input type="text" id="city" /><br />
+          <label>Enter Country:</label>
+          <input type="text" id="country" /><br />
+          <label>Upload Image:</label>
+          <input type="file" id="image" accept="image/*" /><br />
+        </form>
+        <button class="btn" onclick="generateCard()">Generate Card</button>
+      </div>
+      <div class="right">
+        <h2>Generated Card</h2>
+        <div id="generated-card" class="card">
+          <div class="card-inner">
+            <img
+              src="user-placeholder.png"
+              alt="User Photo"
+              class="card-img"
+              id="card-img"
+            />
+            <div class="card-details">
+              <h3 class="card-name">Name: <span id="card-name"></span></h3>
+              <h3 class="card-college">
+                College Name: <span id="card-college"></span>
+              </h3>
+              <h3 class="card-location">
+                Location: <span id="card-location"></span>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
